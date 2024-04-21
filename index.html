@@ -65,6 +65,41 @@ var body =
         }
     </script>
 
+    <p>Click the button below to compose a RSE update email:</p>
+    <button onclick="composeRSEEmail()">Compose RSE Email</button>
+    <script>
+        function composeRSEEmail() {
+            var recipient = '';
+            var subject = 'RSE-AUNZ news digest - Parkville lunch/Monash lunch/Online meeting this Thursday';
+var body = 
+            'https://rseaa.github.io\n\n' +
+            'https://rse-aunz.github.io/events/\n\n' +
+            'https://meet.google.com/nsj-cetr-beb\n\n' +
+            'I thought I would merge all the emails I sent into one news digest this week.\n\n' +
+            'Events:\n' +
+            '- RSE Parkville lunch catchup is on this Thursday at 12.30pm at Dr Dax.\n' +
+            '- RSE Monash lunch catchup is on this Thursday at 12.30pm at Guzman y Gomez.\n' +
+            '- RSE online catchup is on this Thursday at 1pm at Guzman y Gomez.\n' +
+            '- RSEAA24, the RSE Asia Australia unconference has added an extra day, Tuesday the 10th for an RSE Leaders meeting.\n' +
+            '- All events are on the RSE-AUNZ regular networking events page.\n\n' +
+            'News and Articles:\n' +
+            '- \n' +
+            '- \n\n' +
+            'Jobs:\n' +
+            '- \n' +
+            '- \n\n' +
+
+                       'Please let us know if you have any suggestions!';
+
+            var mailtoLink = 'mailto:' + encodeURIComponent(recipient) + 
+                             '?subject=' + encodeURIComponent(subject) + 
+                             '&body=' + encodeURIComponent(body);
+
+            window.open(mailtoLink,'_blank');
+        }
+    </script>
+
+
 
 
 </body>
